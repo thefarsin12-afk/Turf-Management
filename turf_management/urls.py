@@ -18,13 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from turf_booking.views import AdminRegister
 from turf_booking.views import TurfListCreateView,TurfRetrieveUpdateDeleteView
+from turf_team_register.views import TurfRegisterListCreate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    # turf record booking rough
     path('admin-register/',AdminRegister.as_view()),
-
     path('turf/',TurfListCreateView.as_view()),
-
     path("turf/<int:pk>/",TurfRetrieveUpdateDeleteView.as_view()),
+
+    # turf team register booking rough
+    path("register/",TurfRegisterListCreate.as_view()),
 ]

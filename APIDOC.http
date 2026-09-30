@@ -49,6 +49,14 @@ Authorization: Basic admin:1234
 
 #api for deleting record
 ###
-DELETE http://127.0.0.1:8000/turf/2/
+DELETE http://127.0.0.1:8000/turf/1/
 Accept: application/json
 Authorization: Basic admin:1234
+
+
+# api for calling turf team booking =====
+
+#api for calling list all team register record
+###
+GET http://127.0.0.1:8000/register/
+Accept: application/json

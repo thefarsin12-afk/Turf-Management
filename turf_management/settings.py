@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'turf_booking',
     'rest_framework',
+    'turf_team_register',
 ]
 
 MIDDLEWARE = [
