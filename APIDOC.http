@@ -1,0 +1,54 @@
+# api for add admin
+###
+POST http://127.0.0.1:8000/admin-register/
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "email":"admin@gmail.com",
+    "password":1234
+}
+
+#api for list all turf
+###
+GET http://127.0.0.1:8000/turf/
+Accept: application/json
+Authorization: Basic admin:1234
+
+#create a record api 
+###
+POST http://127.0.0.1:8000/turf/
+Content-Type: application/json
+Authorization: Basic admin:1234
+
+{
+    "name": "City Football Arena",
+    "location": "Perinthalmanna",
+    "email": "cityarena@gmail.com",
+    "phone_number": 9876543212
+}
+
+#api calling to detail for record
+###
+GET http://127.0.0.1:8000/turf/2/
+Accept: application/json
+Authorization: Basic admin:1234
+
+#api for updating record
+###
+PUT http://127.0.0.1:8000/turf/2/
+Content-Type: application/json
+Authorization: Basic admin:1234
+
+{
+  "name": "Green Valley Turf",
+  "location": "perinthalamnna",
+  "email": "valley@gmail.com",
+  "phone_number": 9639028191
+}
+
+#api for deleting record
+###
+DELETE http://127.0.0.1:8000/turf/2/
+Accept: application/json
+Authorization: Basic admin:1234
