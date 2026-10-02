@@ -60,3 +60,44 @@ Authorization: Basic admin:1234
 ###
 GET http://127.0.0.1:8000/register/
 Accept: application/json
+
+# add to booking team
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "team_name":"Fusion-team",
+
+    "phone_number":5679327898,
+
+    "date":"2026-08-3",
+
+    "duration":"2 hours"
+}
+
+# api for listing details
+###
+GET http://127.0.0.1:8000/register/3/
+Accept: application/json
+
+# api for updating record
+###
+PUT http://127.0.0.1:8000/register/3/
+Content-Type: application/json
+
+{
+    "team_name":"rush-team",
+
+    "phone_number":9979327898,
+
+    "date":"2026-08-9",
+
+    "duration":"2 hours"
+}
+
+
+# api for deleting record
+###
+DELETE http://127.0.0.1:8000/register/3/
+Accept: application/json

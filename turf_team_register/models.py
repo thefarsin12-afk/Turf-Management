@@ -8,7 +8,7 @@ class TurfRegister(models.Model):
 
     phone_number = models.PositiveIntegerField()
 
-    date = models.DateTimeField()
+    date = models.DateField()
 
     duration = models.CharField(max_length=150)
 

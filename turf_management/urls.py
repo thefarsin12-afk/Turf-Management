@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from turf_booking.views import AdminRegister
 from turf_booking.views import TurfListCreateView,TurfRetrieveUpdateDeleteView
-from turf_team_register.views import TurfRegisterListCreate
+from turf_team_register.views import TurfRegisterListCreate,TurfRetrieveUpdateDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +30,5 @@ urlpatterns = [
 
     # turf team register booking rough
     path("register/",TurfRegisterListCreate.as_view()),
+    path("register/<int:pk>/",TurfRetrieveUpdateDeleteView.as_view()),
 ]

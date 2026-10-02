@@ -2,10 +2,12 @@ from rest_framework import serializers
 
 class TurfRegisterSerializer(serializers.Serializer):
 
+    id = serializers.CharField(read_only=True)
+
     team_name = serializers.CharField()
 
     phone_number = serializers.IntegerField()
 
-    date = serializers.DateTimeField(read_only=True)
+    date = serializers.DateField()
 
-    duration = serializers.CharField(read_only=True)
+    duration = serializers.CharField()
