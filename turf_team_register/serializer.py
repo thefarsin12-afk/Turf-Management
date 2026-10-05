@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+from turf_booking.models import Turf
+
 class TurfRegisterSerializer(serializers.Serializer):
 
     id = serializers.CharField(read_only=True)

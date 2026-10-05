@@ -1,5 +1,7 @@
 from django.db import models
 
+from turf_booking.models import Turf
+
 # Create your models here.
 
 class TurfRegister(models.Model):
@@ -14,4 +16,4 @@ class TurfRegister(models.Model):
 
     def __str__(self):
 
-        self.team_name
+        return self.team_name
