@@ -1,6 +1,8 @@
 from django.db import models
+from turf_booking.models import Turf
 
-class Turf(models.Model):
+
+class Booking(models.Model):
 
     name = models.CharField(max_length=200)
 
@@ -10,12 +12,20 @@ class Turf(models.Model):
 
     phone_number = models.PositiveIntegerField()
 
-    duration = models.TimeField()
+    turf = models.ForeignKey(
+        Turf,
+        on_delete=models.CASCADE,
+    )
 
-    end_duration = models.TimeField
+    duration = models.CharField(
+        max_length=100
+    )
 
-    def __str__(self,name):
+    booking_date = models.DateField()
 
+    booking_time = models.TimeField()
+
+    def __str__(self):
         return self.name
 
     

@@ -61,11 +61,11 @@ class TurfListCreateView(APIView):
         else:
             return Response(data=serializer_instants.errors)
 
-class TurfRetrieveUpdateDeleteView(APIView):
-
-    authentication_classes = [authentication.BasicAuthentication]
-    
-    permission_classes  = [permissions.IsAdminUser]
+class TurfRetrieveUpdateDeleteVie(APIView):
+    """
+        authentication_classes = [authentication.BasicAuthentication]
+        
+        permission_classes  = [permissions.IsAdminUser]"""
 
     def get(self,request,pk=None):
 

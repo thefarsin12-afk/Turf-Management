@@ -1,16 +1,13 @@
 from rest_framework import serializers
 
-class TurfSerializer(serializers.Serializer):
+from turf_booking.models import Turf
 
-    id = serializers.CharField(read_only = True)
-    
-    name = serializers.CharField()
+class TurfSerializer(serializers.ModelSerializer):
 
-    location = serializers.CharField()
+    class Meta:
 
-    email = serializers.EmailField()
-
-    phone_number = serializers.IntegerField()
+        model =Turf
+        fields = '__all__'
 
 
 class UserSerializers(serializers.Serializer):

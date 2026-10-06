@@ -35,7 +35,7 @@ class TurfRegisterListCreate(APIView):
         else:
             return Response(data=serializer_instant.errors)
 
-class TurfRetrieveUpdateDeleteView(APIView):
+class TurfRetrieveUpdateDelete(APIView):
 
     def get (self,request,pk=None):
 
