@@ -61,7 +61,7 @@ class TurfBookingListCreateView(APIView):
 
             booking_time_details = time(7, 0)
 
-            last_booking_object = Booking.objects.filter(turf=turf_id,booking_date=booking_date).order_by("booking_time").last()
+            last_booking_object = Booking.objects.filter(turf=turf_id,booking_date=booking_date).last()
 
             if last_booking_object:
 
